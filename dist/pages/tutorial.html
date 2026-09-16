@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Tutorial</title>
+</head>
+<body class="min-h-screen flex flex-col">
+    <header class="h-17 border-b border-[#b8bec9] flex items-center px-6 bg-royal-blue-100">
+        <a href="./main.html" class="w-10 h-10 rounded-full bg-royal-blue-200 flex items-center justify-center hover:opacity-75">
+            <img src="../images/arrow-left.png" alt="Icone voltar">
+        </a>
+    </header>
+
+    <div class="flex-1 bg-royal-blue-100 flex justify-center py-6 px-5">
+        <main class="flex-1 bg-white px-3 py-4 rounded-2xl max-w-88 max-h-240">
+            <header class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                    <div id="imageContainer" class="bg-royal-blue-700 w-10 h-10 rounded-4xl flex items-center justify-center">.</div>
+                    <h1 id="title" class="font-bold uppercase "></h1>
+                </div>
+                
+                <p id="steps-n" class="bg-gray-300 text-gray-600 font-bold px-1 py-0.5 rounded-2xl text-[12px]"></p>
+            </header>
+
+            <div class="bg-black flex-1 h-87 rounded-2xl mb-5">
+                <img id="stepImage" src="../images/" alt="imagem da etapa" class="w-full h-full max-h-90">
+            </div>
+
+            <div id="steps" class="flex items-center gap-2 justify-center mb-7">
+            </div>
+
+            <div class="mb-12">
+                <h2 id="descTitle" class="font-bold mb-2">Por onde acessar o Modo Comida?</h2>
+                <p id="desc">O Modo Comida está localizado na opção Mais. Para encontrá-lo, clique ou deslize a barra até essa seção, onde será possível visualizar o ícone e o nome do modo.</p>
+            </div>
+
+            <button id="btn-next" class="w-full py-2 bg-royal-blue-700 text-white font-bold rounded-3xl hover:opacity-75 hover:cursor-pointer">
+                Avançar
+            </button>
+        </main>
+    </div>
+
+    <script src="../../data.js"></script>
+    <script src="../js/tutorial.js"></script>
+</body>
+</html>
