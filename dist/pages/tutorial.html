@@ -17,7 +17,7 @@
         <main class="flex-1 bg-white px-3 py-4 rounded-2xl max-w-88 max-h-240">
             <header class="flex items-center justify-between mb-4">
                 <div class="flex items-center gap-3">
-                    <div id="imageContainer" class="bg-royal-blue-700 w-10 h-10 rounded-4xl flex items-center justify-center">.</div>
+                    <div id="imageContainer" class="bg-royal-blue-700 w-10 h-10 rounded-4xl flex items-center justify-center"></div>
                     <h1 id="title" class="font-bold uppercase "></h1>
                 </div>
                 
@@ -36,10 +36,23 @@
                 <p id="desc">O Modo Comida está localizado na opção Mais. Para encontrá-lo, clique ou deslize a barra até essa seção, onde será possível visualizar o ícone e o nome do modo.</p>
             </div>
 
-            <button id="btn-next" class="w-full py-2 bg-royal-blue-700 text-white font-bold rounded-3xl hover:opacity-75 hover:cursor-pointer">
-                Avançar
-            </button>
+            <div class="flex flex-row gap-2 md:flex-col">
+
+                <button id="btn-next" class="order-2 md:order-1 w-1/2 md:w-full py-2 bg-[#0445EA] text-white font-bold rounded-3xl hover:opacity-75 hover:cursor-pointer"
+                >
+                    Avançar
+                </button>
+
+                <button id="btn-back" class="order-1 md:order-2 w-1/2 md:w-full py-2 bg-[#E8EEFB] text-[#0445EA] font-bold rounded-3xl hover:opacity-75 hover:cursor-pointer disabled:opacity-50"
+                >
+                    Voltar
+                </button>
+            
+             </div>
+
+        
         </main>
+
     </div>
 
     <script src="../../data.js"></script>

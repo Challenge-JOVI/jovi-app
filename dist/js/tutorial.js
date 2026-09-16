@@ -9,6 +9,7 @@ const stepContainer = document.getElementById("steps")
 const ImageContainer = document.getElementById("imageContainer")
 const numberSteps = document.getElementById("steps-n")
 const btnNext = document.getElementById("btn-next")
+const btnBack = document.getElementById("btn-back")
 
 const params = new URLSearchParams(window.location.search);
 const tutorialId = params.get("id");
@@ -21,7 +22,7 @@ title.innerHTML = tutorial.title
 
 const icon = document.createElement('img')
 icon.src = tutorial.icon
-icon.classList.add("w-5", "h-5", "ml-[-4px]")
+icon.classList.add("w-5", "h-5")
 ImageContainer.appendChild(icon)
 
 stepImage.src = tutorial.steps[etapaAtual].image
@@ -42,6 +43,8 @@ const steps = document.querySelectorAll("#step")
 updateInfo();
 
 function updateInfo() {
+    btnBack.disabled = etapaAtual === 0;
+
     steps.forEach((item, index) => {
         item.classList.toggle("bg-royal-blue-700", index === etapaAtual)
         item.classList.toggle("bg-gray-300", index !== etapaAtual)
@@ -68,3 +71,14 @@ btnNext.addEventListener("click", ()=>{
         window.location.href = `final.html?name=${tutorial.title}`;
     }
 })
+
+btnBack.addEventListener("click", () => {
+    if (etapaAtual > 0) {
+        etapaAtual--;
+
+        btnNext.textContent = "Avançar";
+
+        updateInfo();
+
+    }
+});
