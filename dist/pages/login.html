@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Login</title>
+</head>
+<body class="bg-royal-blue-100 min-h-screen grid place-items-center px-6">
+     <div class="w-full max-w-[375px] mt-8">
+        <div>
+            <img src="../images/login-bg.png" alt="Imagem de fundo login" class="w-full">
+        </div>
+        <form id="form" method="POST" class="bg-white px-5 py-6 -translate-y-14 rounded-4xl">
+            <h1 class="text-2xl font-bold text-royal-blue-700">JOVI CAMERA GUIDE</h1>
+            <p class="mb-16 font-medium">Entre na sua conta :)</p>
+
+            <label class="font-semibold" for="email">E-mail:</label>
+            <div class="flex mb-4 bg-[#ECECEC] w-full gap-3 items-center px-2 py-2.5 rounded-lg">
+                <img src="../images/envelope-solid-full.svg" alt="e-mail icone" class="w-6 h-6">
+                <input id="email" name="email" type="email" placeholder="Coloque o seu e-mail" class="w-full focus:outline-none focus:ring-0 focus:border-0">
+            </div>
+
+            <label class="font-semibold" for="password">Senha:</label>
+            <div class="flex mb-2  bg-[#ECECEC] w-full gap-3 items-center px-2 py-2.5 rounded-lg">
+                <img src="../images/lock-solid-full.svg" alt="e-mail icone" class="w-6 h-6">
+                <input id="password" name="password"  type="password" placeholder="Coloque a sua senha" class="w-full focus:outline-none focus:ring-0 focus:border-0">
+            </div>
+
+            <a href="#" class="block mb-16 text-end underline text-sm opacity-80">Esqueci minha senha</a>
+
+            <p id="message"class="text-sm text-center mb-8"></p>
+
+            <button class="block bg-linear-to-r from-royal-blue-700 to-royal-blue-500 w-full py-3 rounded-4xl mb-4 hover:opacity-70 hover:cursor-pointer">
+                <p class="inline-block text-base text-white font-extrabold">Entrar</p>
+            </button>
+
+            <p class="text-sm text-center mb-4">Ainda não tem uma conta? <span class="text-royal-blue-700 font-bold"><a href="./signup.html">Cadastrar-se!</a></span></p>
+        </form>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>
