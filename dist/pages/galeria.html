@@ -8,111 +8,19 @@
 </head>
 <body class="min-h-screen bg-linear-to-b from-royal-blue-100 via-white to-royal-blue-100">
     <header class="sticky top-0 z-30 bg-royal-blue-100/85 backdrop-blur-md border-b border-line">
-        <div class="mx-auto max-w-98 px-5 py-4">
-            <h1 class="text-2xl font-extrabold tracking-tight bg-linear-to-r from-royal-blue-700 to-royal-blue-500 bg-clip-text text-transparent leading-tight">Galeria</h1>
-            <p class="text-xs text-muted">Toque em uma foto para visualizar as sugestões do JOVI</p>
+        <div class="mx-auto max-w-98 px-5 py-4 flex items-end justify-between gap-3">
+            <div>
+                <h1 class="text-2xl font-extrabold tracking-tight bg-linear-to-r from-royal-blue-700 to-royal-blue-500 bg-clip-text text-transparent leading-tight">Galeria</h1>
+                <p class="text-xs text-muted">Toque em uma foto para ver as sugestões do JOVI</p>
+            </div>
+
+            <p id="counter" class="text-[11px] font-bold text-royal-blue-700 bg-white px-3 py-1.5 rounded-full ring-1 ring-line shrink-0"></p>
         </div>
     </header>
 
-    <!-- Fotos de exemplo do Lorem Picsum (picsum.photos), acervo do Unsplash sob a Unsplash License: uso livre, sem necessidade de atribuicao. -->
-    <main class="mx-auto max-w-98 px-5 py-6 pb-32">
-        <div class="columns-2 gap-4">
-            <a href="#" class="group relative block break-inside-avoid mb-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-line">
-                <img src="https://picsum.photos/id/30/400/520" alt="Caneca com selos postais sobre um mapa antigo" class="w-full transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Ver sugestões</span>
-            </a>
-
-            <a href="#" class="group relative block break-inside-avoid mb-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-line">
-                <img src="https://picsum.photos/id/40/400/460" alt="Close do focinho de um gato" class="w-full transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Ver sugestões</span>
-            </a>
-
-            <a href="#" class="group relative block break-inside-avoid mb-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-line">
-                <img src="https://picsum.photos/id/53/400/420" alt="Nuvem solitária em um céu azul" class="w-full transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Ver sugestões</span>
-            </a>
-
-            <a href="#" class="group relative block break-inside-avoid mb-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-line">
-                <img src="https://picsum.photos/id/43/400/360" alt="Ponte do Brooklyn iluminada à noite, em preto e branco" class="w-full transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Ver sugestões</span>
-            </a>
-
-            <a href="#" class="group relative block break-inside-avoid mb-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-line">
-                <img src="https://picsum.photos/id/33/400/400" alt="Flores silvestres em um campo ao pôr do sol" class="w-full transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Ver sugestões</span>
-            </a>
-
-            <a href="#" class="group relative block break-inside-avoid mb-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-line">
-                <img src="https://picsum.photos/id/48/400/440" alt="Notebook sobre uma mesa de madeira em uma cafeteria" class="w-full transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Ver sugestões</span>
-            </a>
-
-            <a href="#" class="group relative block break-inside-avoid mb-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-line">
-                <img src="https://picsum.photos/id/41/400/420" alt="Gotas de água sobre uma superfície escura" class="w-full transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Ver sugestões</span>
-            </a>
-
-            <a href="#" class="group relative block break-inside-avoid mb-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-line">
-                <img src="https://picsum.photos/id/58/400/360" alt="Farol de pedra sobre rochas, em preto e branco" class="w-full transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Ver sugestões</span>
-            </a>
-
-            <a href="#" class="group relative block break-inside-avoid mb-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-line">
-                <img src="https://picsum.photos/id/39/400/500" alt="Agulha de um toca-discos sobre um vinil" class="w-full transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Ver sugestões</span>
-            </a>
-
-            <a href="#" class="group relative block break-inside-avoid mb-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-line">
-                <img src="https://picsum.photos/id/50/400/500" alt="Ave de asas abertas ao lado de um barco ancorado" class="w-full transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Ver sugestões</span>
-            </a>
-
-            <a href="#" class="group relative block break-inside-avoid mb-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-line">
-                <img src="https://picsum.photos/id/45/400/540" alt="Frente de um tuk-tuk colorido com a placa à mostra" class="w-full transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Ver sugestões</span>
-            </a>
-
-            <a href="#" class="group relative block break-inside-avoid mb-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-line">
-                <img src="https://picsum.photos/id/37/400/380" alt="Costa com vegetação e flores vermelhas em primeiro plano" class="w-full transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Ver sugestões</span>
-            </a>
-
-            <a href="#" class="group relative block break-inside-avoid mb-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-line">
-                <img src="https://picsum.photos/id/56/400/460" alt="Luzes noturnas desfocadas em efeito bokeh" class="w-full transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Ver sugestões</span>
-            </a>
-
-            <a href="#" class="group relative block break-inside-avoid mb-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-line">
-                <img src="https://picsum.photos/id/42/400/400" alt="Xícara de café sobre uma mesa de madeira em uma cafeteria" class="w-full transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Ver sugestões</span>
-            </a>
-
-            <a href="#" class="group relative block break-inside-avoid mb-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-line">
-                <img src="https://picsum.photos/id/52/400/380" alt="Deck de madeira sob um céu azul" class="w-full transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Ver sugestões</span>
-            </a>
-
-            <a href="#" class="group relative block break-inside-avoid mb-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-line">
-                <img src="https://picsum.photos/id/59/400/520" alt="Cerca de arame farpado em um campo" class="w-full transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Ver sugestões</span>
-            </a>
-        </div>
+    <!-- Os cards são gerados pelo galeria.js a partir do array "galeria" do data.js -->
+    <main id="main" class="mx-auto max-w-98 px-5 py-6 pb-24">
+        <div id="grid" class="grid grid-cols-2 gap-4"></div>
     </main>
 
     <div class="fixed inset-x-0 bottom-0 z-40">
@@ -153,5 +61,38 @@
             </nav>
         </div>
     </div>
+
+    <div id="loading" class="hidden fixed inset-0 z-50 bg-royal-blue-1000/30 backdrop-blur-md" role="alertdialog" aria-live="polite" aria-label="Analisando a foto">
+        <div class="w-full h-full flex items-center justify-center px-5">
+            <div class="w-full max-w-88 bg-white rounded-3xl shadow-card px-6 py-12 text-center">
+                <div class="relative mx-auto w-20 h-20 mb-6">
+                    <div class="absolute inset-0 rounded-full border-4 border-royal-blue-100 border-t-royal-blue-700 animate-spin" aria-hidden="true"></div>
+                    <div class="absolute inset-3 rounded-full bg-royal-blue-100 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-royal-blue-700" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <h2 class="text-xl font-extrabold tracking-tight mb-1">Analisando a foto</h2>
+                <p class="text-sm text-muted leading-relaxed mb-8">A IA está processando sua imagem e preparando as sugestões.</p>
+
+                <div class="flex items-center justify-between gap-3 text-xs font-bold text-royal-blue-700 mb-2">
+                    <span id="loading-file" class="truncate">Processando imagem...</span>
+                    <span id="progress-label" class="shrink-0">0%</span>
+                </div>
+
+                <div class="w-full h-2.5 bg-royal-blue-100 rounded-full overflow-hidden">
+                    <div id="progress" class="h-full w-0 rounded-full bg-linear-to-r from-royal-blue-700 to-royal-blue-400 transition-all duration-300"></div>
+                </div>
+
+                <p class="text-xs text-muted mt-4">Isso pode levar alguns segundos...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../data.js"></script>
+    <script src="../js/loading.js"></script>
+    <script src="../js/galeria.js"></script>
 </body>
 </html>
