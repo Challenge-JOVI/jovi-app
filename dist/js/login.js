@@ -18,7 +18,7 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
-    const users = JSON.parse(localStorage.getItem("users"))
+    const users = JSON.parse(localStorage.getItem("users")) || []
 
     const user = users.find((user)=>{
         return user.email == email && user.password == password
@@ -29,7 +29,7 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
-    window.location.href = 'index.html'
+    window.location.href = 'menu.html'
     
 })
 
@@ -38,10 +38,10 @@ function showMessage(text, type) {
     message.textContent = text;
 
     if (type === "error") {
-        message.className = "text-sm text-center mb-4 text-red-600";
+        message.className = "text-sm text-center font-semibold rounded-2xl px-4 py-3 mb-4 bg-red-50 text-red-600 ring-1 ring-red-200";
     }
 
     if (type === "success") {
-        message.className ="text-sm text-center mb-4 text-green-600";
+        message.className = "text-sm text-center font-semibold rounded-2xl px-4 py-3 mb-4 bg-green-50 text-green-700 ring-1 ring-green-200";
     }
 }

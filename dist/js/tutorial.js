@@ -9,6 +9,7 @@ const stepContainer = document.getElementById("steps")
 const ImageContainer = document.getElementById("imageContainer")
 const numberSteps = document.getElementById("steps-n")
 const btnNext = document.getElementById("btn-next")
+const btnLabel = document.getElementById("btn-label")
 
 const params = new URLSearchParams(window.location.search);
 const tutorialId = params.get("id");
@@ -17,41 +18,38 @@ const tutorial = tutorials.find(
   tutorial => tutorial.id === tutorialId
 );
 
-title.innerHTML = tutorial.title
+title.textContent = tutorial.title
 
 const icon = document.createElement('img')
 icon.src = tutorial.icon
-icon.classList.add("w-5", "h-5", "ml-[-4px]")
+icon.alt = ""
+icon.classList.add("w-5", "h-5")
 ImageContainer.appendChild(icon)
 
-stepImage.src = tutorial.steps[etapaAtual].image
-
-descTitle.innerHTML = tutorial.steps[etapaAtual].title
-desc.innerHTML = tutorial.steps[etapaAtual].description
-
-
-for(let i=0; i < tutorial.steps.length; i++){ 
+for(let i=0; i < tutorial.steps.length; i++){
     const span = document.createElement("span")
-    span.classList.add("w-6", "h-1.5", "bg-gray-300", "rounded-xl")
-    span.id = "step"
+    span.classList.add("step", "h-1.5", "rounded-full", "transition-all", "duration-300")
     stepContainer.appendChild(span)
 }
 
-const steps = document.querySelectorAll("#step")
+const steps = document.querySelectorAll(".step")
 
 updateInfo();
 
 function updateInfo() {
     steps.forEach((item, index) => {
+        item.classList.toggle("w-8", index === etapaAtual)
         item.classList.toggle("bg-royal-blue-700", index === etapaAtual)
-        item.classList.toggle("bg-gray-300", index !== etapaAtual)
+        item.classList.toggle("w-2", index !== etapaAtual)
+        item.classList.toggle("bg-royal-blue-200", index !== etapaAtual)
     })
 
-    numberSteps.innerHTML = `Passos: ${etapaAtual + 1} / ${tutorial.steps.length}`
+    numberSteps.textContent = `Passo ${etapaAtual + 1} de ${tutorial.steps.length}`
 
     stepImage.src = tutorial.steps[etapaAtual].image
+    stepImage.alt = `Imagem da etapa ${etapaAtual + 1} do tutorial ${tutorial.title}`
 
-    descTitle.innerHTML = tutorial.steps[etapaAtual].title
+    descTitle.textContent = tutorial.steps[etapaAtual].title
     desc.innerHTML = tutorial.steps[etapaAtual].description
 }
 
@@ -60,11 +58,11 @@ btnNext.addEventListener("click", ()=>{
         etapaAtual++;
 
         if (etapaAtual == steps.length - 1) {
-            btnNext.textContent = "Finalizar";
+            btnLabel.textContent = "Finalizar";
         }
 
         updateInfo();
     } else {
-        window.location.href = `final.html?name=${tutorial.title}`;
+        window.location.href = `final.html?name=${encodeURIComponent(tutorial.title)}`;
     }
 })

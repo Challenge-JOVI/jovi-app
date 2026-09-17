@@ -6,20 +6,25 @@
     <link rel="stylesheet" href="../css/styles.css">
     <title>Tutorial - Final</title>
 </head>
-<body class="min-h-screen flex flex-col items-center bg-royal-blue-700 justify-between py-15 px-10">
-    <header>
-        <img src="../images/logo.png" alt="Logo" class="w-20">
-    </header>
+<body class="relative min-h-screen overflow-x-hidden bg-linear-to-b from-royal-blue-900 via-royal-blue-700 to-royal-blue-600">
+    <div class="pointer-events-none fixed -top-32 -left-24 w-96 h-96 rounded-full bg-royal-blue-400/30 blur-3xl" aria-hidden="true"></div>
+    <div class="pointer-events-none fixed -bottom-40 -right-24 w-96 h-96 rounded-full bg-royal-blue-500/40 blur-3xl" aria-hidden="true"></div>
 
-    <main class="flex items-center flex-col gap-15 text-2xl">
-        <img src="../images/medal.png" alt="Ícone medalha">
-        <h1 id="title" class="font-extrabold text-white text-center max-w-80">Você completou o tutorial do(a) !</h1>
-    </main>
+    <div class="relative mx-auto max-w-98 min-h-screen px-8 py-14 flex flex-col items-center justify-between text-center">
+        <header>
+            <img src="../images/logo.png" alt="Logo JOVI" class="w-20">
+        </header>
 
+        <main class="flex flex-col items-center gap-10">
+            <div class="flex items-center justify-center w-32 h-32 rounded-full bg-white/10 ring-8 ring-white/5">
+                <img src="../images/medal.png" alt="Ícone de medalha" class="w-20">
+            </div>
 
-    <button id="btn" class="px-14 py-2 text-white font-bold border-white border-2 rounded-3xl bg-linear-to-r from-royal-blue-700 to-royal-blue-500 hover:opacity-75 hover:cursor-pointer">
-        <a>Fechar</a>
-    </button>
+            <h1 id="title" class="text-3xl font-extrabold tracking-tight leading-snug text-white max-w-80"></h1>
+        </main>
+
+        <button id="btn" class="btn-outline">Fechar</button>
+    </div>
 
     <script src="../js/final.js"></script>
 </body>

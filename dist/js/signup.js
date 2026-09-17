@@ -9,8 +9,6 @@ const termsInput = document.querySelector("#terms");
 const button = document.querySelector("#register-btn");
 const message = document.querySelector("#message");
 
-console.log(form)
-
 form.addEventListener("submit", (event) => {
 
     event.preventDefault();
@@ -97,11 +95,11 @@ function showMessage(text, type) {
     message.textContent = text;
 
     if (type === "error") {
-        message.className ="text-sm text-center mb-4 mt-2 text-red-600";
+        message.className = "text-sm text-center font-semibold rounded-2xl px-4 py-3 mb-4 bg-red-50 text-red-600 ring-1 ring-red-200";
     }
 
     if (type === "success") {
-        message.className ="text-sm text-center mb-4 mt-2 text-green-600";
+        message.className = "text-sm text-center font-semibold rounded-2xl px-4 py-3 mb-4 bg-green-50 text-green-700 ring-1 ring-green-200";
     }
 
 }
