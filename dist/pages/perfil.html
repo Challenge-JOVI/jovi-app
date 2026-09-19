@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfil - John Doe</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#F3EEE3',
+          brand: '#3F5DF0',
+        }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="../css/perfil.css">
+</head>
+<body class="min-h-screen flex items-center justify-center p-0 sm:p-6">
+
+  <!-- Mockup do celular -->
+  <div class="relative w-full h-[100dvh] sm:h-auto sm:w-[380px] bg-transparent sm:bg-[#e9e4f7] p-0 sm:p-3 rounded-none sm:rounded-[2.5rem] phone-frame">
+    <div class="relative bg-white sm:rounded-[2rem] overflow-hidden flex flex-col h-full sm:h-[700px]">
+
+      <!-- Conteúdo -->
+      <div class="flex-1 px-5 sm:px-6 pt-8 sm:pt-10 pb-4">
+
+        <!-- Avatar -->
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center">
+            <svg class="w-12 h-12 text-brand" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/>
+            </svg>
+          </div>
+          <h1 id="userName" class="mt-4 text-2xl font-bold text-brand">John Doe</h1>
+          <p id="userEmail" class="text-gray-400 text-sm mt-1">e-mail@exemplo.com</p>
+        </div>
+
+        <!-- Tutoriais completos -->
+        <div class="mt-8 bg-gray-50 rounded-2xl p-4">
+          <div class="flex items-center justify-between mb-2">
+            <span data-i18n="tutorialsCompleted" class="font-semibold text-gray-800 text-sm">Tutoriais Completos</span>
+            <span id="tutorialCount" class="text-brand font-semibold text-sm">4/8</span>
+          </div>
+          <div class="w-full h-2 bg-blue-100 rounded-full overflow-hidden">
+            <div id="tutorialBar" class="h-full bg-brand rounded-full transition-all duration-500" style="width:50%"></div>
+          </div>
+        </div>
+
+        <!-- Configurações -->
+        <div class="mt-8">
+          <h2 data-i18n="settings" class="text-gray-800 font-semibold mb-3">Configurações</h2>
+
+          <div class="space-y-3">
+            <button class="row-item w-full flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition rounded-2xl px-4 py-3" onclick="openSetting('idioma')">
+              <span class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-brand">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20 15 15 0 010-20z"/></svg>
+                </span>
+                <span data-i18n="language" class="text-gray-700 text-sm font-medium">Idioma</span>
+              </span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+
+            <button class="row-item w-full flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition rounded-2xl px-4 py-3" onclick="openSetting('privacidade')">
+              <span class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-brand">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/></svg>
+                </span>
+                <span data-i18n="privacy" class="text-gray-700 text-sm font-medium">Privacidade</span>
+              </span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+
+            <button class="row-item w-full flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition rounded-2xl px-4 py-3" onclick="openSetting('loja')">
+              <span class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-brand">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 8V6a6 6 0 0112 0v2"/><rect x="3" y="8" width="18" height="13" rx="2"/></svg>
+                </span>
+                <span data-i18n="store" class="text-gray-700 text-sm font-medium">Acesse nossa Loja</span>
+              </span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Desconectar -->
+        <button id="logoutBtn" class="mt-8 w-full border-2 border-red-500 text-red-500 font-semibold rounded-full py-3 flex items-center justify-center gap-2 hover:bg-red-50 transition">
+          <span data-i18n="logout">Desconectar</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 17l5-5-5-5M21 12H9M13 21H6a2 2 0 01-2-2V5a2 2 0 012-2h7"/></svg>
+        </button>
+      </div>
+
+      <!-- Barra de navegação inferior -->
+      <div class="flex items-center justify-around border-t border-gray-100 py-3">
+        <button class="nav-item flex flex-col items-center gap-1 text-gray-400" data-tab="tutoriais">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M8 13L6 21l6-3 6 3-2-8"/></svg>
+          <span data-i18n="navTutorials" class="text-[10px]">Tutoriais</span>
+        </button>
+        <button class="nav-item flex flex-col items-center gap-1 text-gray-400" data-tab="galeria">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span data-i18n="navGallery" class="text-[10px]">Galeria</span>
+        </button>
+        <button class="nav-item flex flex-col items-center gap-1 text-brand" data-tab="perfil">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/></svg>
+          <span data-i18n="navProfile" class="text-[10px] font-semibold">Perfil</span>
+        </button>
+      </div>
+
+      <!-- Fundo escuro do modal -->
+      <div id="modalOverlay" class="absolute inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300 z-40" onclick="closeModal()"></div>
+
+      <!-- Modal (janela que sobe de baixo) -->
+      <div id="settingModal" class="absolute left-0 right-0 bottom-0 bg-white rounded-t-3xl shadow-2xl translate-y-full transition-transform duration-300 ease-out z-50 max-h-[80%] flex flex-col">
+        <div class="flex items-center justify-between px-5 pt-4 pb-3 border-b border-gray-100">
+          <h3 id="modalTitle" class="font-semibold text-gray-800 text-base">Título</h3>
+          <button onclick="closeModal()" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M6 18L18 6"/></svg>
+          </button>
+        </div>
+        <div id="modalContent" class="px-5 py-4 overflow-y-auto"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast de feedback -->
+  <div id="toast" class="toast fixed bottom-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-sm px-5 py-3 rounded-full opacity-0 pointer-events-none">
+    Mensagem
+  </div>
+
+  <script src="../js/perfil.js"></script>
+</body>
+</html>
