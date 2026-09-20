@@ -39,7 +39,7 @@ function updateInfo() {
         inactivePill.forEach(style => pill.classList.toggle(style, !isActive))
     })
 
-    cover.src = tutorial.steps[0].image
+    cover.src = tutorial.menu_image
     cover.alt = `Imagem do tutorial ${tutorial.title}`
 
     title.textContent = tutorial.title

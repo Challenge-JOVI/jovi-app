@@ -3,6 +3,7 @@ const tutorials = [
       id: "super-zoom",
       title: "Super Zoom",
       icon: "../images/superzoom-icon.png",
+      menu_image: "../images/sz2.png",
       steps: [
         {
           title: "Como acessar o Super Zoom?",
@@ -37,6 +38,7 @@ Após o enquadramento da imagem, toque no botão de captura para registrar a fot
       id: "aura-light",
       title: "Aura Light com IA",
       icon: "../images/auralight-icon.png",
+      menu_image: "../images/al1.png",
       steps: [
         {
           title: "Como acessar o Aura Light?",
@@ -87,6 +89,7 @@ Em seguida, você poderá ajustar a <strong>intensidade da luz.</strong>`,
       id: "autofocus",
       title: "AutoFocus",
       icon: "../images/autofocus-icon.png",
+      menu_image: "../images/af2.png",
       steps: [
         {
           title: "Como utilizar o Autofocus?",
@@ -117,6 +120,7 @@ A câmera principal de 200 MP possui <strong>AutoFocus (AF)</strong>, permitindo
       id: "microfilme",
       title: "Microfilme",
       icon: "../images/microfilme-icon.png",
+      menu_image: "../images/mf2.png",
       steps: [
         {
           title: "Como acessar o Microfilme?",
@@ -141,6 +145,7 @@ Esse modo está disponível para ser utilizado na <strong>câmera principal tras
       id: "modo-superlua",
       title: "SuperLua",
       icon: "../images/superlua-icon.png",
+      menu_image: "../images/sp3.png",
       steps: [
         {
           title: "Como acessar o modo SuperLua?",
@@ -178,6 +183,7 @@ O modo <strong>Superlua</strong> está disponível na câmera principal traseira
       id: "modo-comida",
       title: "Modo Comida",
       icon: "../images/modocomida-icon.png",
+      menu_image: "../images/mc3.png",
       steps: [
         {
           title: "Como acessar o modo Comida?",
@@ -207,6 +213,7 @@ Toque em <strong>Comida</strong> para ativar o modo específico para fotografar 
       id: "modo-cores",
       title: "Modo Cores",
       icon: "../images/modocores-icon.png",
+      menu_image: "../images/mdc3.jpeg",
       steps: [
         {
           title: "Como acessar o Modo Cores?",
@@ -243,6 +250,7 @@ Com o tom escolhido, <strong>enquadre a cena e toque no botão de captura.</stro
       id: "visualizacao-dupla",
       title: "Visualização Dupla",
       icon: "../images/visualizacaodupla-icon.png",
+      menu_image: "../images/vd4.jpeg",
       steps: [
         {
           title: "Como acessar a Visualização Dupla?",
