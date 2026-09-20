@@ -42,6 +42,6 @@ btn.addEventListener('click', ()=>{
 
         updateStep()
     } else {
-        window.location.href = "signup.html";
+        window.location.href = "login.html";
     }
 })

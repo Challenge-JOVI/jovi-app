@@ -532,7 +532,7 @@ document.getElementById('logout-btn').addEventListener('click', () => {
   showToast(t('loggedOut'));
 
   setTimeout(() => {
-    window.location.href = 'login.html';
+    window.location.href = 'onboarding.html';
   }, 1200);
 });
 
