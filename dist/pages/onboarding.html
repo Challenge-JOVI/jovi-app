@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Onboarding</title>
+</head>
+<body class="relative min-h-dvh overflow-hidden bg-linear-to-b from-royal-blue-900 via-royal-blue-700 to-royal-blue-600">
+    <div class="pointer-events-none fixed -top-32 -left-24 w-96 h-96 rounded-full bg-royal-blue-400/30 blur-3xl" aria-hidden="true"></div>
+    <div class="pointer-events-none fixed -bottom-40 -right-24 w-96 h-96 rounded-full bg-royal-blue-500/40 blur-3xl" aria-hidden="true"></div>
+
+    <div class="relative mx-auto max-w-98 min-h-dvh px-8 py-14 flex flex-col items-center justify-between text-center">
+        <header>
+            <img src="../images/logo.png" alt="Logo JOVI" class="w-20">
+        </header>
+
+        <main>
+            <h1 id="title" class="text-3xl font-extrabold tracking-tight leading-snug text-white max-w-80"></h1>
+        </main>
+
+        <div class="w-full flex flex-col items-center gap-8">
+            <div id="dots" class="flex items-center gap-2"></div>
+
+            <button id="btn" class="btn-outline">Próximo</button>
+        </div>
+    </div>
+
+    <script src="../js/onboarding.js"></script>
+</body>
+</html>

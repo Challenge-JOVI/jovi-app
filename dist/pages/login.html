@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Login</title>
+</head>
+<body class="min-h-screen bg-linear-to-b from-royal-blue-100 via-white to-royal-blue-100 flex items-center justify-center px-5 py-10">
+    <div class="w-full max-w-88">
+        <div class="rounded-4xl overflow-hidden shadow-card">
+            <img src="../images/login-bg.png" alt="" class="w-full">
+        </div>
+
+        <form id="form" method="POST" class="relative -mt-14 bg-white rounded-4xl shadow-card ring-1 ring-line px-6 py-8">
+            <h1 class="text-2xl font-extrabold tracking-tight bg-linear-to-r from-royal-blue-700 to-royal-blue-500 bg-clip-text text-transparent">JOVI CAMERA GUIDE</h1>
+            <p class="text-sm text-muted mb-8">Entre na sua conta :)</p>
+
+            <label class="block text-sm font-semibold mb-1.5" for="email">E-mail</label>
+            <div class="input-field mb-4">
+                <img src="../images/envelope-solid-full.svg" alt="" class="w-5 h-5 opacity-60">
+                <input id="email" name="email" type="email" placeholder="Coloque o seu e-mail">
+            </div>
+
+            <label class="block text-sm font-semibold mb-1.5" for="password">Senha</label>
+            <div class="input-field mb-2">
+                <img src="../images/lock-solid-full.svg" alt="" class="w-5 h-5 opacity-60">
+                <input id="password" name="password" type="password" placeholder="Coloque a sua senha">
+            </div>
+
+            <a href="#" class="block mb-8 text-end text-sm text-muted underline transition-colors hover:text-royal-blue-700">Esqueci minha senha</a>
+
+            <p id="message" class="text-sm text-center mb-4"></p>
+
+            <button class="btn-primary mb-5">Entrar</button>
+
+            <p class="text-sm text-center text-muted">Ainda não tem uma conta? <a href="./signup.html" class="font-bold text-royal-blue-700 hover:underline">Cadastrar-se!</a></p>
+        </form>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>

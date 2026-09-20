@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Perfil</title>
+</head>
+<body class="min-h-screen bg-linear-to-b from-royal-blue-100 via-white to-royal-blue-100">
+    <header class="sticky top-0 z-30 bg-royal-blue-100/85 backdrop-blur-md border-b border-line">
+        <div class="mx-auto max-w-98 px-5 py-4 flex items-end justify-between gap-3">
+            <div>
+                <h1 data-i18n="profileTitle" class="text-2xl font-extrabold tracking-tight bg-linear-to-r from-royal-blue-700 to-royal-blue-500 bg-clip-text text-transparent leading-tight">Perfil</h1>
+                <p data-i18n="profileSubtitle" class="text-xs text-muted">Seus dados e as preferências do aplicativo</p>
+            </div>
+
+            <span id="member-since" class="text-[11px] font-bold text-royal-blue-700 bg-white px-3 py-1.5 rounded-full ring-1 ring-line shrink-0"></span>
+        </div>
+    </header>
+
+    <!-- Os dados exibidos vêm do cadastro, salvos no localStorage em "users" -->
+    <main class="mx-auto max-w-98 px-5 py-6 pb-32">
+        <section class="bg-white rounded-3xl shadow-card ring-1 ring-line p-6 text-center mb-5">
+            <div id="avatar" class="mx-auto w-20 h-20 rounded-full bg-linear-to-br from-royal-blue-700 to-royal-blue-500 shadow-float flex items-center justify-center text-2xl font-extrabold text-white mb-4"></div>
+
+            <h2 id="user-name" class="text-xl font-extrabold tracking-tight leading-tight"></h2>
+            <p id="user-email" class="text-sm text-muted mb-5"></p>
+
+            <dl class="grid grid-cols-2 gap-3 text-left">
+                <div class="bg-field rounded-2xl ring-1 ring-line px-4 py-3">
+                    <dt data-i18n="ageLabel" class="text-[11px] font-bold text-muted">Idade</dt>
+                    <dd id="user-age" class="text-sm font-semibold"></dd>
+                </div>
+
+                <div class="bg-field rounded-2xl ring-1 ring-line px-4 py-3">
+                    <dt data-i18n="memberSinceLabel" class="text-[11px] font-bold text-muted">Membro desde</dt>
+                    <dd id="user-created" class="text-sm font-semibold"></dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="bg-white rounded-3xl shadow-card ring-1 ring-line p-5 mb-5">
+            <div class="flex items-center justify-between gap-3 mb-3">
+                <h3 data-i18n="tutorialsCompleted" class="text-sm font-bold">Tutoriais completos</h3>
+                <span id="tutorial-count" class="text-[11px] font-bold text-royal-blue-700 bg-royal-blue-100 px-3 py-1.5 rounded-full shrink-0"></span>
+            </div>
+
+            <div class="w-full h-2.5 bg-royal-blue-100 rounded-full overflow-hidden">
+                <div id="tutorial-bar" class="h-full w-0 rounded-full bg-linear-to-r from-royal-blue-700 to-royal-blue-400 transition-all duration-500"></div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3 data-i18n="settings" class="text-sm font-bold mb-3 px-1">Configurações</h3>
+
+            <div class="bg-white rounded-3xl shadow-card ring-1 ring-line p-2">
+                <button type="button" class="w-full flex items-center gap-3 px-3 py-3 rounded-2xl cursor-pointer transition-colors hover:bg-royal-blue-100" onclick="openSetting('idioma')">
+                    <span class="flex items-center justify-center w-10 h-10 rounded-2xl bg-royal-blue-100 text-royal-blue-700 shrink-0">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zm0 0c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3 7.5 7.03 7.5 12s2.015 9 4.5 9zM3.6 9h16.8M3.6 15h16.8" />
+                        </svg>
+                    </span>
+                    <span data-i18n="language" class="flex-1 text-left text-sm font-semibold">Idioma</span>
+                    <span id="current-lang" class="text-xs text-muted"></span>
+                    <svg class="w-4 h-4 text-muted shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
+
+                <button type="button" class="w-full flex items-center gap-3 px-3 py-3 rounded-2xl cursor-pointer transition-colors hover:bg-royal-blue-100" onclick="openSetting('privacidade')">
+                    <span class="flex items-center justify-center w-10 h-10 rounded-2xl bg-royal-blue-100 text-royal-blue-700 shrink-0">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7.5 3.75v5.25c0 4.556-3.2 8.25-7.5 9.75-4.3-1.5-7.5-5.194-7.5-9.75V6.75L12 3z" />
+                        </svg>
+                    </span>
+                    <span data-i18n="privacy" class="flex-1 text-left text-sm font-semibold">Privacidade</span>
+                    <svg class="w-4 h-4 text-muted shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
+
+                <button type="button" class="w-full flex items-center gap-3 px-3 py-3 rounded-2xl cursor-pointer transition-colors hover:bg-royal-blue-100" onclick="openSetting('loja')">
+                    <span class="flex items-center justify-center w-10 h-10 rounded-2xl bg-royal-blue-100 text-royal-blue-700 shrink-0">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993l1.263 12A1.125 1.125 0 0 1 19.75 21.75H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z" />
+                        </svg>
+                    </span>
+                    <span data-i18n="store" class="flex-1 text-left text-sm font-semibold">Acesse nossa Loja</span>
+                    <svg class="w-4 h-4 text-muted shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <button id="logout-btn" type="button" class="btn-danger">
+            <span data-i18n="logout">Desconectar</span>
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M18.75 15L21.75 12m0 0l-3-3m3 3h-12" />
+            </svg>
+        </button>
+    </main>
+
+    <div class="fixed inset-x-0 bottom-0 z-40">
+        <div class="relative mx-auto max-w-98">
+            <nav class="h-18 bg-white/95 backdrop-blur-md border-t border-line rounded-t-3xl shadow-card flex items-center justify-around">
+                <a href="./menu.html" class="flex flex-col items-center gap-1 w-20 text-muted transition-colors hover:text-royal-blue-700">
+                    <span class="flex items-center justify-center w-12 h-7 rounded-full">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0" />
+                        </svg>
+                    </span>
+                    <span data-i18n="navTutorials" class="text-[11px] font-semibold">Tutoriais</span>
+                </a>
+
+                <a href="./galeria.html" class="flex flex-col items-center gap-1 w-20 text-muted transition-colors hover:text-royal-blue-700">
+                    <span class="flex items-center justify-center w-12 h-7 rounded-full">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0z" />
+                        </svg>
+                    </span>
+                    <span data-i18n="navGallery" class="text-[11px] font-semibold">Galeria</span>
+                </a>
+
+                <a href="./perfil.html" aria-current="page" class="flex flex-col items-center gap-1 w-20 text-royal-blue-700 transition-colors hover:text-royal-blue-800">
+                    <span class="flex items-center justify-center w-12 h-7 rounded-full bg-royal-blue-100">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0zM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                        </svg>
+                    </span>
+                    <span data-i18n="navProfile" class="text-[11px] font-bold">Perfil</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <div id="modal-overlay" class="fixed inset-0 z-40 bg-royal-blue-1000/30 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" onclick="closeModal()"></div>
+
+    <div class="fixed inset-x-0 bottom-0 z-50 pointer-events-none">
+        <div id="setting-modal" class="mx-auto max-w-98 max-h-[80dvh] flex flex-col bg-white rounded-t-3xl shadow-card pointer-events-auto translate-y-full transition-transform duration-300 ease-out">
+            <div class="flex items-center justify-between gap-3 px-5 pt-5 pb-4 border-b border-line">
+                <h2 id="modal-title" class="text-lg font-extrabold tracking-tight"></h2>
+
+                <button type="button" onclick="closeModal()" aria-label="Fechar" class="w-9 h-9 rounded-2xl bg-field ring-1 ring-line text-muted flex items-center justify-center shrink-0 cursor-pointer transition-colors hover:bg-royal-blue-100 hover:text-royal-blue-700">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div id="modal-content" class="px-5 py-4 overflow-y-auto"></div>
+        </div>
+    </div>
+
+    <p id="toast" class="fixed left-1/2 bottom-28 z-50 -translate-x-1/2 max-w-80 text-center text-sm font-semibold text-white bg-ink px-5 py-3 rounded-full shadow-float opacity-0 pointer-events-none transition-opacity duration-300"></p>
+
+    <script src="../../data.js"></script>
+    <script src="../js/perfil.js"></script>
+</body>
+</html>
