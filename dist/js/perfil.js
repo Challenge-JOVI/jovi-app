@@ -2,6 +2,15 @@
 const translations = {
   'pt-BR': {
     settings: 'Configurações',
+    profileTitle: 'Perfil',
+    profileSubtitle: 'Seus dados e as preferências do aplicativo',
+    ageLabel: 'Idade',
+    memberSinceLabel: 'Membro desde',
+    yearsOld: age => `${age} anos`,
+    memberSinceChip: date => `Membro desde ${date}`,
+    guestName: 'Visitante',
+    guestEmail: 'Cadastre-se para ver seus dados aqui',
+    notInformed: 'Não informado',
     language: 'Idioma',
     privacy: 'Privacidade',
     store: 'Acesse nossa Loja',
@@ -15,7 +24,6 @@ const translations = {
     disabledWord: 'desativado',
     languageChanged: name => `Idioma alterado para ${name}`,
     opening: name => `Abrindo ${name}...`,
-    downloading: name => `Baixando "${name}"...`,
     privacyOptions: [
       { id: 'location', label: 'Localização', desc: 'Permitir acesso à sua localização' },
       { id: 'camera', label: 'Câmera', desc: 'Permitir acesso à câmera' },
@@ -24,15 +32,25 @@ const translations = {
       { id: 'ads', label: 'Anúncios personalizados', desc: 'Usar seus dados para personalizar anúncios' },
       { id: 'analytics', label: 'Dados de uso', desc: 'Compartilhar dados de uso para melhorias' }
     ],
-    storeApps: [
-      { name: 'Tutoriais Pro', desc: 'Conteúdo extra e trilhas avançadas', price: 'Grátis' },
-      { name: 'Tema Escuro Plus', desc: 'Novos temas para o aplicativo', price: 'R$ 4,90' },
-      { name: 'Backup na Nuvem', desc: 'Guarde seu progresso com segurança', price: 'Grátis' },
-      { name: 'Certificados Digitais', desc: 'Emita certificados dos tutoriais concluídos', price: 'R$ 9,90' }
-    ]
+    storeNote: 'Canais de venda oficiais da JOVI no Brasil.',
+    storeLinks: {
+      site: 'Site oficial da JOVI',
+      shopee: 'Loja oficial na Shopee',
+      mercadolivre: 'Loja oficial no Mercado Livre',
+      amazon: 'Loja oficial na Amazon'
+    }
   },
   'en-US': {
     settings: 'Settings',
+    profileTitle: 'Profile',
+    profileSubtitle: 'Your details and the app preferences',
+    ageLabel: 'Age',
+    memberSinceLabel: 'Member since',
+    yearsOld: age => `${age} years old`,
+    memberSinceChip: date => `Member since ${date}`,
+    guestName: 'Guest',
+    guestEmail: 'Sign up to see your details here',
+    notInformed: 'Not provided',
     language: 'Language',
     privacy: 'Privacy',
     store: 'Visit our Store',
@@ -46,7 +64,6 @@ const translations = {
     disabledWord: 'disabled',
     languageChanged: name => `Language changed to ${name}`,
     opening: name => `Opening ${name}...`,
-    downloading: name => `Downloading "${name}"...`,
     privacyOptions: [
       { id: 'location', label: 'Location', desc: 'Allow access to your location' },
       { id: 'camera', label: 'Camera', desc: 'Allow access to the camera' },
@@ -55,15 +72,25 @@ const translations = {
       { id: 'ads', label: 'Personalized ads', desc: 'Use your data to personalize ads' },
       { id: 'analytics', label: 'Usage data', desc: 'Share usage data for improvements' }
     ],
-    storeApps: [
-      { name: 'Tutorials Pro', desc: 'Extra content and advanced tracks', price: 'Free' },
-      { name: 'Dark Theme Plus', desc: 'New themes for the app', price: '$0.99' },
-      { name: 'Cloud Backup', desc: 'Keep your progress safe', price: 'Free' },
-      { name: 'Digital Certificates', desc: 'Issue certificates for completed tutorials', price: '$1.99' }
-    ]
+    storeNote: 'JOVI\'s official sales channels in Brazil.',
+    storeLinks: {
+      site: 'JOVI official website',
+      shopee: 'Official store on Shopee',
+      mercadolivre: 'Official store on Mercado Livre',
+      amazon: 'Official store on Amazon'
+    }
   },
   'es-ES': {
     settings: 'Configuración',
+    profileTitle: 'Perfil',
+    profileSubtitle: 'Tus datos y las preferencias de la aplicación',
+    ageLabel: 'Edad',
+    memberSinceLabel: 'Miembro desde',
+    yearsOld: age => `${age} años`,
+    memberSinceChip: date => `Miembro desde ${date}`,
+    guestName: 'Invitado',
+    guestEmail: 'Regístrate para ver tus datos aquí',
+    notInformed: 'No indicado',
     language: 'Idioma',
     privacy: 'Privacidad',
     store: 'Visita nuestra Tienda',
@@ -77,7 +104,6 @@ const translations = {
     disabledWord: 'desactivado',
     languageChanged: name => `Idioma cambiado a ${name}`,
     opening: name => `Abriendo ${name}...`,
-    downloading: name => `Descargando "${name}"...`,
     privacyOptions: [
       { id: 'location', label: 'Ubicación', desc: 'Permitir acceso a tu ubicación' },
       { id: 'camera', label: 'Cámara', desc: 'Permitir acceso a la cámara' },
@@ -86,15 +112,25 @@ const translations = {
       { id: 'ads', label: 'Anuncios personalizados', desc: 'Usar tus datos para personalizar anuncios' },
       { id: 'analytics', label: 'Datos de uso', desc: 'Compartir datos de uso para mejoras' }
     ],
-    storeApps: [
-      { name: 'Tutoriales Pro', desc: 'Contenido extra y rutas avanzadas', price: 'Gratis' },
-      { name: 'Tema Oscuro Plus', desc: 'Nuevos temas para la aplicación', price: '0,99 €' },
-      { name: 'Copia en la Nube', desc: 'Guarda tu progreso de forma segura', price: 'Gratis' },
-      { name: 'Certificados Digitales', desc: 'Emite certificados de los tutoriales completados', price: '1,99 €' }
-    ]
+    storeNote: 'Canales de venta oficiales de JOVI en Brasil.',
+    storeLinks: {
+      site: 'Sitio oficial de JOVI',
+      shopee: 'Tienda oficial en Shopee',
+      mercadolivre: 'Tienda oficial en Mercado Livre',
+      amazon: 'Tienda oficial en Amazon'
+    }
   },
   'fr-FR': {
     settings: 'Paramètres',
+    profileTitle: 'Profil',
+    profileSubtitle: "Vos informations et les préférences de l'application",
+    ageLabel: 'Âge',
+    memberSinceLabel: 'Membre depuis',
+    yearsOld: age => `${age} ans`,
+    memberSinceChip: date => `Membre depuis ${date}`,
+    guestName: 'Invité',
+    guestEmail: 'Inscrivez-vous pour voir vos informations ici',
+    notInformed: 'Non renseigné',
     language: 'Langue',
     privacy: 'Confidentialité',
     store: 'Visitez notre Boutique',
@@ -108,7 +144,6 @@ const translations = {
     disabledWord: 'désactivé',
     languageChanged: name => `Langue changée en ${name}`,
     opening: name => `Ouverture de ${name}...`,
-    downloading: name => `Téléchargement de « ${name} »...`,
     privacyOptions: [
       { id: 'location', label: 'Localisation', desc: "Autoriser l'accès à votre position" },
       { id: 'camera', label: 'Caméra', desc: "Autoriser l'accès à la caméra" },
@@ -117,15 +152,25 @@ const translations = {
       { id: 'ads', label: 'Publicités personnalisées', desc: 'Utiliser vos données pour personnaliser les publicités' },
       { id: 'analytics', label: "Données d'utilisation", desc: "Partager les données d'utilisation pour des améliorations" }
     ],
-    storeApps: [
-      { name: 'Tutoriels Pro', desc: 'Contenu supplémentaire et parcours avancés', price: 'Gratuit' },
-      { name: 'Thème Sombre Plus', desc: "Nouveaux thèmes pour l'application", price: '0,99 €' },
-      { name: 'Sauvegarde Cloud', desc: 'Protégez votre progression', price: 'Gratuit' },
-      { name: 'Certificats Numériques', desc: 'Délivrez des certificats pour les tutoriels terminés', price: '1,99 €' }
-    ]
+    storeNote: 'Canaux de vente officiels de JOVI au Brésil.',
+    storeLinks: {
+      site: 'Site officiel de JOVI',
+      shopee: 'Boutique officielle sur Shopee',
+      mercadolivre: 'Boutique officielle sur Mercado Livre',
+      amazon: 'Boutique officielle sur Amazon'
+    }
   },
   'de-DE': {
     settings: 'Einstellungen',
+    profileTitle: 'Profil',
+    profileSubtitle: 'Deine Daten und die App-Einstellungen',
+    ageLabel: 'Alter',
+    memberSinceLabel: 'Mitglied seit',
+    yearsOld: age => `${age} Jahre`,
+    memberSinceChip: date => `Mitglied seit ${date}`,
+    guestName: 'Gast',
+    guestEmail: 'Registriere dich, um deine Daten hier zu sehen',
+    notInformed: 'Keine Angabe',
     language: 'Sprache',
     privacy: 'Datenschutz',
     store: 'Besuche unseren Store',
@@ -139,7 +184,6 @@ const translations = {
     disabledWord: 'deaktiviert',
     languageChanged: name => `Sprache geändert zu ${name}`,
     opening: name => `${name} wird geöffnet...`,
-    downloading: name => `„${name}" wird heruntergeladen...`,
     privacyOptions: [
       { id: 'location', label: 'Standort', desc: 'Zugriff auf deinen Standort erlauben' },
       { id: 'camera', label: 'Kamera', desc: 'Zugriff auf die Kamera erlauben' },
@@ -148,15 +192,25 @@ const translations = {
       { id: 'ads', label: 'Personalisierte Werbung', desc: 'Deine Daten für personalisierte Werbung verwenden' },
       { id: 'analytics', label: 'Nutzungsdaten', desc: 'Nutzungsdaten für Verbesserungen teilen' }
     ],
-    storeApps: [
-      { name: 'Tutorials Pro', desc: 'Zusätzliche Inhalte und fortgeschrittene Kurse', price: 'Kostenlos' },
-      { name: 'Dunkles Design Plus', desc: 'Neue Designs für die App', price: '0,99 €' },
-      { name: 'Cloud-Backup', desc: 'Sichere deinen Fortschritt', price: 'Kostenlos' },
-      { name: 'Digitale Zertifikate', desc: 'Zertifikate für abgeschlossene Tutorials ausstellen', price: '1,99 €' }
-    ]
+    storeNote: 'Offizielle Verkaufskanäle von JOVI in Brasilien.',
+    storeLinks: {
+      site: 'Offizielle JOVI-Website',
+      shopee: 'Offizieller Shop bei Shopee',
+      mercadolivre: 'Offizieller Shop bei Mercado Livre',
+      amazon: 'Offizieller Shop bei Amazon'
+    }
   },
   'it-IT': {
     settings: 'Impostazioni',
+    profileTitle: 'Profilo',
+    profileSubtitle: "I tuoi dati e le preferenze dell'app",
+    ageLabel: 'Età',
+    memberSinceLabel: 'Membro dal',
+    yearsOld: age => `${age} anni`,
+    memberSinceChip: date => `Membro dal ${date}`,
+    guestName: 'Ospite',
+    guestEmail: 'Registrati per vedere i tuoi dati qui',
+    notInformed: 'Non indicato',
     language: 'Lingua',
     privacy: 'Privacy',
     store: 'Visita il nostro Negozio',
@@ -170,7 +224,6 @@ const translations = {
     disabledWord: 'disattivato',
     languageChanged: name => `Lingua cambiata in ${name}`,
     opening: name => `Apertura di ${name} in corso...`,
-    downloading: name => `Download di "${name}" in corso...`,
     privacyOptions: [
       { id: 'location', label: 'Posizione', desc: 'Consenti l\'accesso alla tua posizione' },
       { id: 'camera', label: 'Fotocamera', desc: 'Consenti l\'accesso alla fotocamera' },
@@ -179,15 +232,25 @@ const translations = {
       { id: 'ads', label: 'Annunci personalizzati', desc: 'Usa i tuoi dati per personalizzare gli annunci' },
       { id: 'analytics', label: 'Dati di utilizzo', desc: 'Condividi i dati di utilizzo per migliorie' }
     ],
-    storeApps: [
-      { name: 'Tutorial Pro', desc: 'Contenuti extra e percorsi avanzati', price: 'Gratis' },
-      { name: 'Tema Scuro Plus', desc: 'Nuovi temi per l\'app', price: '0,99 €' },
-      { name: 'Backup su Cloud', desc: 'Proteggi i tuoi progressi', price: 'Gratis' },
-      { name: 'Certificati Digitali', desc: 'Rilascia certificati per i tutorial completati', price: '1,99 €' }
-    ]
+    storeNote: 'Canali di vendita ufficiali di JOVI in Brasile.',
+    storeLinks: {
+      site: 'Sito ufficiale di JOVI',
+      shopee: 'Negozio ufficiale su Shopee',
+      mercadolivre: 'Negozio ufficiale su Mercado Livre',
+      amazon: 'Negozio ufficiale su Amazon'
+    }
   },
   'ja-JP': {
     settings: '設定',
+    profileTitle: 'プロフィール',
+    profileSubtitle: 'あなたの情報とアプリの設定',
+    ageLabel: '年齢',
+    memberSinceLabel: '登録日',
+    yearsOld: age => `${age}歳`,
+    memberSinceChip: date => `${date}から利用中`,
+    guestName: 'ゲスト',
+    guestEmail: '登録するとここに情報が表示されます',
+    notInformed: '未入力',
     language: '言語',
     privacy: 'プライバシー',
     store: 'ストアを見る',
@@ -201,7 +264,6 @@ const translations = {
     disabledWord: 'オフ',
     languageChanged: name => `言語が${name}に変更されました`,
     opening: name => `${name}を開いています...`,
-    downloading: name => `「${name}」をダウンロード中...`,
     privacyOptions: [
       { id: 'location', label: '位置情報', desc: '位置情報へのアクセスを許可する' },
       { id: 'camera', label: 'カメラ', desc: 'カメラへのアクセスを許可する' },
@@ -210,12 +272,13 @@ const translations = {
       { id: 'ads', label: 'パーソナライズ広告', desc: 'データを使って広告をパーソナライズする' },
       { id: 'analytics', label: '使用状況データ', desc: '改善のために使用状況データを共有する' }
     ],
-    storeApps: [
-      { name: 'チュートリアルPro', desc: '追加コンテンツと上級コース', price: '無料' },
-      { name: 'ダークテーマPlus', desc: 'アプリの新しいテーマ', price: '¥150' },
-      { name: 'クラウドバックアップ', desc: '進捗を安全に保存', price: '無料' },
-      { name: 'デジタル証明書', desc: '修了したチュートリアルの証明書を発行', price: '¥300' }
-    ]
+    storeNote: 'ブラジルにおけるJOVIの公式販売チャネルです。',
+    storeLinks: {
+      site: 'JOVI公式サイト',
+      shopee: 'Shopee公式ストア',
+      mercadolivre: 'Mercado Livre公式ストア',
+      amazon: 'Amazon公式ストア'
+    }
   }
 };
 
@@ -228,6 +291,14 @@ const languages = [
   { code: 'de-DE', name: 'Deutsch' },
   { code: 'it-IT', name: 'Italiano' },
   { code: 'ja-JP', name: '日本語' }
+];
+
+// Canais de venda oficiais da JOVI no Brasil (a marca não tem e-commerce próprio)
+const stores = [
+  { id: 'site', name: 'jovimobile.com', url: 'https://www.jovimobile.com/br' },
+  { id: 'shopee', name: 'Shopee', url: 'https://shopee.com.br/jovioficial' },
+  { id: 'mercadolivre', name: 'Mercado Livre', url: 'https://www.mercadolivre.com.br/loja/jovi' },
+  { id: 'amazon', name: 'Amazon', url: 'https://www.amazon.com.br/stores/JOVIOficial/page/5D12A6CF-C41D-43B5-BD55-91E9751D68D6' }
 ];
 
 let currentLang = 'pt-BR';
@@ -252,31 +323,78 @@ function applyStaticTranslations() {
     const key = el.getAttribute('data-i18n');
     el.textContent = t(key);
   });
+
+  document.documentElement.lang = currentLang;
+  document.title = t('profileTitle');
+  document.getElementById('current-lang').textContent = languages.find(lang => lang.code === currentLang).name;
+
+  renderUser();
 }
 
-// ================== NAVEGAÇÃO INFERIOR ==================
-const navItems = document.querySelectorAll('.nav-item');
-const tabKeys = { tutoriais: 'navTutorials', galeria: 'navGallery', perfil: 'navProfile' };
+// ================== DADOS DO USUÁRIO (vindos do cadastro) ==================
+function getUsers() {
+  return JSON.parse(localStorage.getItem('users')) || [];
+}
 
-navItems.forEach(item => {
-  item.addEventListener('click', () => {
-    navItems.forEach(i => {
-      i.classList.remove('text-brand');
-      i.classList.add('text-gray-400');
-      i.querySelector('span').classList.remove('font-semibold');
-      i.querySelector('svg').setAttribute('fill', 'none');
-    });
-    item.classList.remove('text-gray-400');
-    item.classList.add('text-brand');
-    item.querySelector('span').classList.add('font-semibold');
-    item.querySelector('svg').setAttribute('fill', 'currentColor');
+// Usa a conta que entrou no login; sem login, mostra a última conta criada
+function getCurrentUser() {
+  const users = getUsers();
 
-    const tab = item.dataset.tab;
-    if (tab !== 'perfil') {
-      showToast(t('opening')(t(tabKeys[tab])));
-    }
+  if (users.length === 0) {
+    return null;
+  }
+
+  const loggedUserId = localStorage.getItem('loggedUserId');
+
+  return users.find(user => user.id === loggedUserId) || users[users.length - 1];
+}
+
+const currentUser = getCurrentUser();
+
+function getInitials(name) {
+  const parts = name.trim().split(/\s+/);
+  const first = parts[0].charAt(0);
+  const last = parts.length > 1 ? parts[parts.length - 1].charAt(0) : '';
+
+  return (first + last).toUpperCase();
+}
+
+function formatDate(isoDate) {
+  if (!isoDate) {
+    return t('notInformed');
+  }
+
+  return new Date(isoDate).toLocaleDateString(currentLang, {
+    month: 'short',
+    year: 'numeric'
   });
-});
+}
+
+function renderUser() {
+  const avatar = document.getElementById('avatar');
+  const memberSince = document.getElementById('member-since');
+
+  if (!currentUser) {
+    avatar.textContent = '?';
+    document.getElementById('user-name').textContent = t('guestName');
+    document.getElementById('user-email').textContent = t('guestEmail');
+    document.getElementById('user-age').textContent = t('notInformed');
+    document.getElementById('user-created').textContent = t('notInformed');
+    memberSince.classList.add('hidden');
+    return;
+  }
+
+  avatar.textContent = getInitials(currentUser.name);
+  document.getElementById('user-name').textContent = currentUser.name;
+  document.getElementById('user-email').textContent = currentUser.email;
+  document.getElementById('user-age').textContent = currentUser.age
+    ? t('yearsOld')(currentUser.age)
+    : t('notInformed');
+  document.getElementById('user-created').textContent = formatDate(currentUser.createdAt);
+
+  memberSince.classList.remove('hidden');
+  memberSince.textContent = t('memberSinceChip')(formatDate(currentUser.createdAt));
+}
 
 // ================== ABRIR CONFIGURAÇÃO ==================
 function openSetting(name) {
@@ -292,15 +410,16 @@ function openSetting(name) {
 // ================== RENDERIZADORES ==================
 function renderLanguages() {
   return `
-    <div class="space-y-1">
+    <div class="flex flex-col gap-1">
       ${languages.map(lang => `
         <button
-          class="lang-option w-full flex items-center justify-between px-3 py-3 rounded-xl hover:bg-gray-50 transition"
+          type="button"
+          class="w-full flex items-center justify-between gap-3 px-3 py-3 rounded-2xl cursor-pointer transition-colors hover:bg-royal-blue-100"
           onclick="selectLanguage('${lang.code}')"
         >
-          <span class="text-sm text-gray-700">${lang.name}</span>
+          <span class="text-sm font-semibold">${lang.name}</span>
           ${lang.code === currentLang
-            ? `<svg class="w-4 h-4 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>`
+            ? `<svg class="w-4 h-4 text-royal-blue-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20 6L9 17l-5-5"/></svg>`
             : ''
           }
         </button>
@@ -312,18 +431,20 @@ function renderLanguages() {
 function renderPrivacy() {
   const options = t('privacyOptions');
   return `
-    <div class="space-y-1">
+    <div class="flex flex-col">
       ${options.map(opt => `
-        <div class="flex items-center justify-between px-1 py-3 border-b border-gray-50 last:border-0">
-          <div class="pr-4">
-            <p class="text-sm font-medium text-gray-700">${opt.label}</p>
-            <p class="text-xs text-gray-400 mt-0.5">${opt.desc}</p>
+        <div class="flex items-center justify-between gap-4 py-3 border-b border-line last:border-0">
+          <div>
+            <p class="text-sm font-semibold">${opt.label}</p>
+            <p class="text-xs text-muted">${opt.desc}</p>
           </div>
           <button
-            class="toggle-switch flex-shrink-0 w-11 h-6 rounded-full relative transition-colors ${privacyState[opt.id] ? 'bg-brand' : 'bg-gray-200'}"
+            type="button"
+            aria-pressed="${privacyState[opt.id]}"
+            class="relative shrink-0 w-11 h-6 rounded-full cursor-pointer transition-colors ${privacyState[opt.id] ? 'bg-royal-blue-700' : 'bg-line'}"
             onclick="togglePrivacy('${opt.id}')"
           >
-            <span class="absolute top-0.5 ${privacyState[opt.id] ? 'left-5' : 'left-0.5'} w-5 h-5 bg-white rounded-full shadow transition-all"></span>
+            <span class="absolute top-0.5 ${privacyState[opt.id] ? 'left-5.5' : 'left-0.5'} w-5 h-5 bg-white rounded-full shadow-float transition-all"></span>
           </button>
         </div>
       `).join('')}
@@ -332,29 +453,34 @@ function renderPrivacy() {
 }
 
 function renderStore() {
-  const apps = t('storeApps');
+  const links = t('storeLinks');
   return `
-    <div class="space-y-3">
-      ${apps.map((app, i) => `
-        <div class="flex items-center justify-between bg-gray-50 rounded-xl px-3 py-3">
+    <div class="flex flex-col gap-3">
+      ${stores.map(store => `
+        <a
+          href="${store.url}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-between gap-3 bg-field ring-1 ring-line rounded-2xl px-3 py-3 transition-colors hover:bg-royal-blue-100"
+          onclick="showToast(t('opening')('${store.name}'))"
+        >
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-brand font-bold text-sm">
-              ${app.name.charAt(0)}
+            <div class="w-10 h-10 rounded-2xl bg-linear-to-br from-royal-blue-700 to-royal-blue-500 flex items-center justify-center text-white font-extrabold text-sm shrink-0">
+              ${store.name.charAt(0).toUpperCase()}
             </div>
             <div>
-              <p class="text-sm font-medium text-gray-700">${app.name}</p>
-              <p class="text-xs text-gray-400">${app.desc}</p>
+              <p class="text-sm font-semibold">${store.name}</p>
+              <p class="text-xs text-muted">${links[store.id]}</p>
             </div>
           </div>
-          <button
-            class="text-xs font-semibold text-brand border border-brand rounded-full px-3 py-1.5 hover:bg-brand hover:text-white transition"
-            onclick="installApp(${i})"
-          >
-            ${app.price}
-          </button>
-        </div>
+          <svg class="w-4 h-4 text-royal-blue-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5M15 3h6m0 0v6m0-6L10.5 13.5" />
+          </svg>
+        </a>
       `).join('')}
     </div>
+
+    <p class="text-xs text-muted mt-4">${t('storeNote')}</p>
   `;
 }
 
@@ -367,49 +493,47 @@ function selectLanguage(code) {
   applyStaticTranslations();
 
   // Atualiza o título do modal e o conteúdo (agora no novo idioma)
-  document.getElementById('modalTitle').textContent = t('language');
-  document.getElementById('modalContent').innerHTML = renderLanguages();
+  document.getElementById('modal-title').textContent = t('language');
+  document.getElementById('modal-content').innerHTML = renderLanguages();
 
   showToast(t('languageChanged')(lang.name));
 }
 
 function togglePrivacy(id) {
   privacyState[id] = !privacyState[id];
-  document.getElementById('modalContent').innerHTML = renderPrivacy();
+  document.getElementById('modal-content').innerHTML = renderPrivacy();
   const opt = t('privacyOptions').find(o => o.id === id);
   showToast(`${opt.label} ${privacyState[id] ? t('enabledWord') : t('disabledWord')}`);
 }
 
-function installApp(index) {
-  const app = t('storeApps')[index];
-  showToast(t('downloading')(app.name));
-}
-
 // ================== CONTROLE DO MODAL ==================
 function openModal(title, contentHtml) {
-  document.getElementById('modalTitle').textContent = title;
-  document.getElementById('modalContent').innerHTML = contentHtml;
+  document.getElementById('modal-title').textContent = title;
+  document.getElementById('modal-content').innerHTML = contentHtml;
 
-  const overlay = document.getElementById('modalOverlay');
-  const modal = document.getElementById('settingModal');
+  const overlay = document.getElementById('modal-overlay');
+  const modal = document.getElementById('setting-modal');
 
   overlay.classList.remove('opacity-0', 'pointer-events-none');
-  overlay.classList.add('opacity-100');
   modal.classList.remove('translate-y-full');
 }
 
 function closeModal() {
-  const overlay = document.getElementById('modalOverlay');
-  const modal = document.getElementById('settingModal');
+  const overlay = document.getElementById('modal-overlay');
+  const modal = document.getElementById('setting-modal');
 
   overlay.classList.add('opacity-0', 'pointer-events-none');
-  overlay.classList.remove('opacity-100');
   modal.classList.add('translate-y-full');
 }
 
 // ================== DESCONECTAR ==================
-document.getElementById('logoutBtn').addEventListener('click', () => {
+document.getElementById('logout-btn').addEventListener('click', () => {
+  localStorage.removeItem('loggedUserId');
   showToast(t('loggedOut'));
+
+  setTimeout(() => {
+    window.location.href = 'login.html';
+  }, 1200);
 });
 
 // ================== TOAST ==================
@@ -419,19 +543,19 @@ function showToast(message) {
   clearTimeout(toastTimeout);
   toast.textContent = message;
   toast.classList.remove('opacity-0');
-  toast.classList.add('opacity-100');
   toastTimeout = setTimeout(() => {
-    toast.classList.remove('opacity-100');
     toast.classList.add('opacity-0');
   }, 2000);
 }
 
 // ================== PROGRESSO DOS TUTORIAIS ==================
-let completed = 4;
-const total = 8;
+const total = tutorials.length;
+const completedIds = JSON.parse(localStorage.getItem('completedTutorials')) || [];
+const completed = tutorials.filter(tutorial => completedIds.includes(tutorial.id)).length;
+
 function updateProgress() {
-  document.getElementById('tutorialCount').textContent = `${completed}/${total}`;
-  document.getElementById('tutorialBar').style.width = `${(completed / total) * 100}%`;
+  document.getElementById('tutorial-count').textContent = `${completed}/${total}`;
+  document.getElementById('tutorial-bar').style.width = `${(completed / total) * 100}%`;
 }
 updateProgress();
 

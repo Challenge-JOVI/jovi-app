@@ -29,6 +29,9 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
+    // Guarda quem entrou para a tela de perfil exibir os dados do cadastro
+    localStorage.setItem("loggedUserId", user.id)
+
     window.location.href = 'menu.html'
     
 })

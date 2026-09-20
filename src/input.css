@@ -81,6 +81,31 @@ body {
     transform: none;
   }
 
+  .btn-danger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    border-radius: 9999px;
+    border: 2px solid #fb2c36;
+    font-weight: 800;
+    color: #e7000b;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .btn-danger:hover {
+    background-color: #fef2f2;
+    transform: translateY(-1px);
+  }
+
+  .btn-danger:active {
+    transform: translateY(0) scale(0.99);
+  }
+
   .btn-outline {
     display: flex;
     align-items: center;
