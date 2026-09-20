@@ -203,6 +203,83 @@ Toque em <strong>Comida</strong> para ativar o modo específico para fotografar 
         },
       ]
     },
+       {
+      id: "modo-cores",
+      title: "Modo Cores",
+      icon: "../images/modocores-icon.png",
+      steps: [
+        {
+          title: "Como acessar o Modo Cores?",
+          description: `Abra o aplicativo <strong>Câmera</strong>, no modo <strong>Foto</strong>, para acessar os <strong>tons de cor</strong> do <strong>JOVI V70 5G.</strong>`,
+          image: "../images/mdc1.jpeg"
+        },
+         {
+          title: "Como encontrar o Modo Cores?",
+          description: `<strong>Na barra superior da câmera</strong>, toque no <strong>ícone de cores</strong> para abrir os três tons disponíveis: <strong>Vívido, Texturizado e Natural.</strong>`,
+          image: "../images/mdc2.jpeg"
+        },
+         {
+          title: "Tom Vívido",
+          description: `O tom <strong>Vívido</strong> aumenta a <strong>saturação e o contraste</strong>, deixando as cores mais fortes.
+Indicado para <strong>paisagens, flores e cenas coloridas.</strong>`,
+          image: "../images/mdc3.jpeg"
+        },
+         {
+          title: "Tom Texturizado",
+          description: `O tom <strong>Texturizado</strong> mantém <strong>tons mais quentes e detalhes mais marcados</strong>, equilibrando luzes e sombras.
+A <strong>pré-visualização já mostra o resultado</strong> antes da captura.`,
+          image: "../images/mdc4.jpeg"
+        },
+         {
+          title: "Tom Natural",
+          description: `O tom <strong>Natural</strong> reproduz as <strong>cores mais fiéis ao que o olho vê</strong>, com menos saturação.
+
+Com o tom escolhido, <strong>enquadre a cena e toque no botão de captura.</strong>`,
+          image: "../images/mdc5.jpeg"
+        },
+      ]
+    },
+       {
+      id: "visualizacao-dupla",
+      title: "Visualização Dupla",
+      icon: "../images/visualizacaodupla-icon.png",
+      steps: [
+        {
+          title: "Como acessar a Visualização Dupla?",
+          description: `Abra o aplicativo <strong>Câmera</strong> para gravar com as câmeras <strong>frontal e traseira ao mesmo tempo</strong> no <strong>JOVI V70 5G.</strong>`,
+          image: "../images/vd1.png"
+        },
+         {
+          title: "Como encontrar a Visualização Dupla?",
+          description: `<strong>Na tela da câmera</strong>, vá até o modo <strong>Vídeo</strong> e deslize pelos modos até encontrar <strong>Mais.</strong>
+Toque em <strong>Visualização dupla</strong> para ativar.`,
+          image: "../images/vd2.jpeg"
+        },
+         {
+          title: "Escolha a resolução",
+          description: `Toque no ícone de <strong>configurações</strong> e escolha a qualidade da gravação <strong>frontal e traseira</strong>: <strong>720p a 27 qps</strong> ou <strong>1080p a 27 qps.</strong>`,
+          image: "../images/vd3.jpeg"
+        },
+         {
+          title: "Escolha o formato da janela",
+          description: `A câmera frontal aparece em uma <strong>janela flutuante</strong> sobre a imagem principal.
+Escolha entre os formatos <strong>Quadrado, Círculo e Coração.</strong>`,
+          image: "../images/vd4.jpeg"
+        },
+         {
+          title: "Posicione a janela",
+          description: `<strong>Arraste a janela flutuante</strong> para o ponto da tela que não atrapalha o enquadramento. Ela continua exibindo a <strong>câmera frontal em tempo real.</strong>`,
+          image: "../images/vd5.jpeg"
+        },
+         {
+          title: "Grave o vídeo",
+          description: `Com o formato definido, toque no <strong>botão vermelho</strong> para iniciar a gravação.
+
+O vídeo é salvo com as <strong>duas câmeras na mesma cena.</strong>`,
+          image: "../images/vd6.jpeg"
+        },
+      ]
+    },
           
     
 ]

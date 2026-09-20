@@ -63,6 +63,18 @@ btnNext.addEventListener("click", ()=>{
 
         updateInfo();
     } else {
+        markAsCompleted(tutorial.id)
+
         window.location.href = `final.html?name=${encodeURIComponent(tutorial.title)}`;
     }
 })
+
+// Guarda o tutorial concluido para o progresso exibido na tela de perfil
+function markAsCompleted(id) {
+    const completed = JSON.parse(localStorage.getItem("completedTutorials")) || []
+
+    if (!completed.includes(id)) {
+        completed.push(id)
+        localStorage.setItem("completedTutorials", JSON.stringify(completed))
+    }
+}
